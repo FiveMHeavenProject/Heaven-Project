@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CMapTypes>
+  <archetypes>
+    <Item type="CBaseArchetypeDef">
+      <lodDist value="100" />
+      <flags value="0" />
+      <specialAttribute value="0" />
+      <bbMin x="-0.102258004" y="-0.22753166" z="-0.025659038" />
+      <bbMax x="0.2391916" y="0.2128984" z="0.39110205" />
+      <bsCentre x="0.0684668" y="-0.0073166266" z="0.18272151" />
+      <bsRadius value="0.34794262" />
+      <hdTextureDist value="100" />
+      <name>emerald</name>
+      <textureDictionary>emerald</textureDictionary>
+      <physicsDictionary>emerald</physicsDictionary>
+      <assetType>ASSET_TYPE_DRAWABLE</assetType>
+      <assetName>emerald</assetName>
+    </Item>
+    <Item type="CBaseArchetypeDef">
+      <lodDist value="100" />
+      <flags value="0" />
+      <specialAttribute value="0" />
+      <bbMin x="-0.102258004" y="-0.22753166" z="-0.025659038" />
+      <bbMax x="0.2391916" y="0.2128984" z="0.39110205" />
+      <bsCentre x="0.0684668" y="-0.0073166266" z="0.18272151" />
+      <bsRadius value="0.34794262" />
+      <hdTextureDist value="100" />
+      <name>bound composite</name>
+      <physicsDictionary>bound composite</physicsDictionary>
+      <assetType>ASSET_TYPE_ASSETLESS</assetType>
+      <assetName>Bound Composite</assetName>
+    </Item>
+  </archetypes>
+  <name>emeraldtyp</name>
+</CMapTypes>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --accent-color: #fd4370;
+    --background: #000;
+    --light-text: #aaa;
+    --loading-bg: #111;
+    --transition: 1s;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    user-select: none;
+    cursor: none !important;
+}
+
+body {
+  background-image: url("./bgc.jpg");
+  background-position:bottom;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+
+
+ #volumeSlider {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    padding-inline: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fd4370;
+    cursor: pointer;
+}
+
+
+
+.loading-state {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--light-text);
+    font-weight: 300;
+    font-size: 0.85em;
+}
+
+.loading-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 1vh;
+    background: var(--loading-bg);
+}
+
+.loading-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #2a93d5 0%, #fd4370 100%);
+    transition: var(--transition);
+}
+
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+    mix-blend-mode: screen;
+  }
+  
+  /* Other */
+  .other {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 5rem;
+    z-index: 1;
+  }
+  
+  .other span {
+    line-height: 2rem;
+  }
+  
+  .other span:nth-child(1) {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .other span:nth-child(2) {
+    font-size: 1.15rem;
+    font-weight: 300;
+  }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-9" y="-9" width="30" height="30" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ksArrows" transform="translate(9 9)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="Group_22" data-name="Group 22" transform="translate(-0.487 0)">
+      <path id="Path_32" data-name="Path 32" d="M5.99.157,1.147,3.514a1.5,1.5,0,0,0-.66,1.23A1.571,1.571,0,0,0,2.964,5.982L6.487,3.547,10.01,5.982a1.568,1.568,0,0,0,2.477-1.238,1.51,1.51,0,0,0-.66-1.238L6.984.149A.886.886,0,0,0,5.99.157Z" transform="translate(0 0)"/>
+      <path id="Path_33" data-name="Path 33" d="M5.99,5.67,1.147,9.018a1.522,1.522,0,0,0-.66,1.238,1.568,1.568,0,0,0,2.477,1.238L6.487,9.06l3.523,2.435a1.568,1.568,0,0,0,2.477-1.238,1.51,1.51,0,0,0-.66-1.238L6.984,5.662A.886.886,0,0,0,5.99,5.67Z" transform="translate(0 0.218)"/>
+    </g>
+  </g>
+</svg>

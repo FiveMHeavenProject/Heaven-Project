@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>loadingScreen</title>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <video id="video" autoplay muted loop>
+        <source src="logo.mp4" type="video/mp4" />
+    </video>
+        <div class="other">
+            <span id="changemsg">Heaven Team życzy miłej rozgrywki (●'◡'●)</span>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-progress-bar"></div>
+        </div>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value=".5" onchange="changeVolume()">
+    <script src="script.js"></script>
+
+    <audio loop autoplay hidden id="song">
+        <source src="muzyka.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        const song = document.getElementById("song")
+        const volumeSlider = document.querySelector("#volumeSlider")
+
+        if (localStorage.getItem("volume")) {
+            const storedVolume = parseFloat(localStorage.getItem("volume"));
+            volumeSlider.value = storedVolume;
+            song.volume = storedVolume;
+        }
+
+        const changeVolume = () => {
+            const volume = parseFloat(volumeSlider.value)
+            song.volume = volume;
+            localStorage.setItem("volume", volume);
+        }
+    </script>
+
+</body>
+
+</html>

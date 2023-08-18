@@ -1,0 +1,2 @@
+ALTER TABLE `users` ADD COLUMN
+	`disabled` TINYINT(1) NULL DEFAULT '0';

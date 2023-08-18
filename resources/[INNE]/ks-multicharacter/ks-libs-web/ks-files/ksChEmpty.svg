@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-1" y="-1" width="30" height="30" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ksChEmpty" transform="translate(1 1)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="Group_35" data-name="Group 35" transform="translate(-3.875 -2.583)">
+      <path id="Path_30" data-name="Path 30" d="M22.075,19.384a7,7,0,0,1,7,7v1.4a2.8,2.8,0,0,1-2.8,2.8H6.675a2.8,2.8,0,0,1-2.8-2.8v-1.4a7,7,0,0,1,7-7Zm5.6-8.4a1.4,1.4,0,0,1,1.4,1.4v1.4h1.4a1.4,1.4,0,0,1,0,2.8h-1.4v1.4a1.4,1.4,0,1,1-2.8,0v-1.4h-1.4a1.4,1.4,0,0,1,0-2.8h1.4v-1.4a1.4,1.4,0,0,1,1.4-1.4Zm-11.2-8.4a7,7,0,1,1-4.95,2.05A7,7,0,0,1,16.475,2.583Z" transform="translate(0)" fill="#fff"/>
+      <path id="Path_31" data-name="Path 31" d="M26.24,10.333a1.427,1.427,0,0,1,1.427,1.427v1.427h1.427a1.427,1.427,0,0,1,0,2.855H27.667V17.47a1.427,1.427,0,1,1-2.854,0V16.043H23.386a1.427,1.427,0,1,1,0-2.855h1.427V11.761a1.427,1.427,0,0,1,1.427-1.427Z" transform="translate(1.353 0.58)" fill="#fd4370"/>
+    </g>
+  </g>
+</svg>

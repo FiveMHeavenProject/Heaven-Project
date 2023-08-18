@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    color: white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+
+
+
+.garage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    min-height: 500px;
+    display: none;
+    background-color: rgba(17, 17, 17, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+
+/* Header */
+.garage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: .4rem;
+}
+
+.garage-header .right-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.garage-header .right-container:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.24562 4.99998C6.20723 4.99998 4.54887 6.69622 4.54887 8.78114C4.54887 9.07078 4.77843 9.30555 5.06155 9.30555C5.34471 9.30555 5.57422 9.07078 5.57422 8.78114C5.57422 7.2745 6.77259 6.04876 8.24562 6.04876C8.52878 6.04876 8.7583 5.814 8.7583 5.52435C8.7583 5.23475 8.52878 4.99998 8.24562 4.99998Z' fill='%238B8B8B'/%3E%3Cpath d='M17.2751 14.7222C18.2019 13.2361 18.7389 11.4729 18.7389 9.58335C18.7389 4.29863 14.5362 0 9.36947 0C7.52205 0 5.7982 0.549316 4.34528 1.49722C3.18766 2.2521 2.20252 3.25972 1.46448 4.44375C0.537709 5.92988 0 7.69375 0 9.58335C0 14.8674 4.20337 19.1666 9.36947 19.1666C11.2169 19.1666 12.9414 18.6166 14.3944 17.6687C15.552 16.9139 16.5371 15.9062 17.2751 14.7222ZM12.4078 15.6368C11.4966 16.1174 10.4633 16.3889 9.36947 16.3889C5.70114 16.3889 2.71577 13.3354 2.71577 9.58335C2.71577 8.4646 2.98126 7.40767 3.45109 6.47573C4.08725 5.21323 5.09823 4.17988 6.33252 3.52988C7.24367 3.04932 8.27633 2.77778 9.36942 2.77778C13.0385 2.77778 16.0231 5.83057 16.0231 9.58335C16.0231 10.7014 15.7576 11.7577 15.2878 12.6896C14.6524 13.9521 13.6421 14.9861 12.4078 15.6368Z' fill='%238B8B8B'/%3E%3Cpath d='M23.8602 21.4431L18.451 15.9243C17.6811 17.0743 16.6946 18.0826 15.5703 18.8709L20.9794 24.3896C21.3773 24.7966 21.8987 25 22.4195 25C22.9409 25 23.4624 24.7966 23.8602 24.3896C24.6552 23.5757 24.6552 22.257 23.8602 21.4431Z' fill='%238B8B8B'/%3E%3C/svg%3E") center / contain no-repeat;
+
+
+}
+
+.garage-header .header-text {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.garage-header .garage-search {
+    width: 15rem;
+    background: rgba(139, 139, 139, 0.2);
+    border-radius: 10px;
+    padding: .8rem 3rem;
+    border: none;
+    color: white;
+    font-family: Roboto;
+}
+
+
+.garage-header .garage-search::placeholder {
+    color: #8B8B8B;
+}
+
+.garage-header .header-text .header-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.garage-header .header-text .header-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* koniec headera */
+
+
+/*  */
+
+
+/* lista aut */
+.garage-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-height: 42rem;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.garage-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+
+
+/* karty */
+
+.car,
+.card-empty-fill {
+    height: 18rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* header karty */
+.car .car-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.car .car-header .car-plate {
+    color: #8B8B8B;
+}
+
+/* koniec headera */
+
+
+
+/* status pojazdu */
+
+
+.car-status {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.car-status svg {
+    width: 26px;
+    height: 20px;
+}
+
+
+.car-status .engine,
+.car-status .suspension,
+.car-status .fuel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* koniec statusu */
+
+
+/* przycisk od wybierania pojazdu */
+
+.car .car-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car .car-footer .car-select-btn {
+    padding: .5rem 1rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid #fd4370;
+    /* background: linear-gradient(90deg, rgba(174, 235, 234, 0.9) 0%, rgba(252, 215, 227, 0.9) 100%); */
+    cursor: default;
+    transition: .2s;
+}
+
+.car .car-footer .car-select-btn:hover {
+    background-color: #fd4370;
+    color: black;
+}

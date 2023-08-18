@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-10" y="-9" width="30" height="30" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ksDel" transform="translate(10 9)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <path id="Vector-1" d="M10,.667H7.5L6.786,0H3.214L2.5.667H0V2H10M.714,10.667a1.29,1.29,0,0,0,.418.943A1.482,1.482,0,0,0,2.143,12H7.857a1.482,1.482,0,0,0,1.01-.391,1.29,1.29,0,0,0,.418-.943v-8H.714Z"/>
+  </g>
+</svg>

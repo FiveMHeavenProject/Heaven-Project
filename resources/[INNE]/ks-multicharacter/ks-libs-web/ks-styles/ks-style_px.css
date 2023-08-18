@@ -1,0 +1,428 @@
+/* Kaizen Default Styles */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+    --ksHover: rgba(0, 194, 255, 0.6);
+    --ksSecondGr: rgba(0, 194, 255, 0.3);
+    --ksMainGr: rgba(0, 194, 255, 1.0);
+    --ksHoverGr: rgba(0, 194, 255, 0.5);
+    --ksOtherClr: #00FFB2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+/* Kaizen Background Style */
+
+#ksRoot {
+    width: 100vw;
+    height: 100vh;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    display: none;
+}
+
+/* Kaizen Overlay Style */
+
+#ksOverlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--ksHoverGr) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#ksCharacterSelector {
+    position: fixed;
+    width: 460px;
+    height: fit-content;
+    top: 100px;
+    left: 100px;
+}
+
+.ksChTitle {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.ksChT_Line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 50px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--ksMainGr);
+}
+
+.ksChT_Icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);   
+    left: 30px;
+}
+
+.ksChT_Txt {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);   
+    left: 80px;
+}
+
+.ksChT_Txt h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ksChT_Txt h2 {
+    color: var(--ksMainGr);
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -8px;
+}
+
+
+#ksSlotsCont {
+    width: 100%;
+    height: 680px;
+    gap: 20px;
+    overflow-y: scroll;
+}
+
+#ksSlotsCont::-webkit-scrollbar {
+    display: none;
+}
+
+.ksSlot {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5); 
+    margin-bottom: 20px;
+}
+
+.ksSlot:hover {
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+.ksSlot_Line {
+    position: absolute;
+    left: 25px;
+    width: 50px;
+    height: 6px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.ksSlot_Icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 30px;
+    top: 25px;
+}
+
+.ksSlot_Txt {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 70px;
+    top: 18px; 
+}
+
+.ksSlot_Txt h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ksSlot_Txt h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -5px;
+}
+
+.ksSlot_Circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 25px;
+    top: 25px;
+    opacity: 0.5;
+    border-radius: 100%;
+}
+
+.ksSlot_Circle:hover {
+    opacity: 0.8;
+}
+
+.ksSlot_CircleDif {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 25px;
+    top: 25px;
+    opacity: 0.5;
+    border-radius: 100%;
+}
+
+.ksSlot_CircleDif:hover {
+    opacity: 0.8;
+}
+
+.ksSlot_InfosCont {
+    position: absolute;
+    width: 410px;
+    height: 125px;
+    left: 25px;
+    bottom: 0px;
+    display: none;
+    opacity: 0;
+}
+
+.ksPmBox {
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.ksPmBoxTxt {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+.ksPmBoxTxt h1 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ksPmBoxTxt h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-top: -5px;
+}
+
+.ksCiIcon {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+#ksCharacterCreator {
+    display: none;
+    position: fixed;
+    width: 460px;
+    height: fit-content;
+    top: 100px;
+    right: 100px;
+}
+
+.ksCCident {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ksCCgender {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.ksCCbirth {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#ksCancelB {
+    outline: none;
+    border: none;
+    width: 145px;
+    height: 50px;
+    background-color: #A73031;
+    color: white;
+    border-radius: 6px;
+    opacity: 0.75;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#ksCancelB:hover {
+    opacity: 1;
+}
+
+#ksCreateB {
+    outline: none;
+    border: none;
+    width: 300px;
+    height: 50px;
+    background-color: var(--ksMainGr);
+    color: white;
+    border-radius: 6px;
+    opacity: 0.75;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#ksCreateB:hover {
+    opacity: 1;
+}
+
+.ksCC_Line {
+    position: absolute;
+    left: 25px;
+    width: 50px;
+    height: 6px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.ksCC_Icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 30px;
+    top: 25px;
+}
+
+.ksCC_Txt {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 70px;
+    top: 18px; 
+}
+
+.ksCC_Txt h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ksCC_Txt h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -5px;
+}
+
+.ksChCT_Icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);   
+    left: 30px;
+}
+
+#ksMale {
+    position: absolute;
+    width: 150px;
+    height: 220px;
+    left: 50px;
+    bottom: 0px;
+    background-image: url('../ks-files/ksMale.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+#ksFemale {
+    position: absolute;
+    width: 150px;
+    height: 220px;
+    right: 50px;
+    bottom: 0px;
+    background-image: url('../ks-files/ksFemale.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+#ksGSelectedCont {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    border-radius: 0px 100px 0px 8px;
+    background-color: rgba(0, 255, 178, 0.4);
+    bottom: 0px;
+}
+
+.ksCC_Box {
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0px 0px;
+    bottom: 0px;
+    left: 25px;
+}
+
+.ksCC_PmBoxTxt {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+.ksCC_PmBoxTxt h1 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: -8px;
+}
+
+.ksCC_Input {
+    outline: none;
+    border: none;
+    width: 160px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    background: transparent;
+}

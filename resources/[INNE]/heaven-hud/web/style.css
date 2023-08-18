@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+}
+
+
+/* globalne klasy */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 3.5px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.gray-digit {
+    color: #aaa;
+}
+
+/* animacja pulsowania do statusu */
+@keyframes pulse {
+    0% {
+        transform: scale(0.90);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.90);
+    }
+}
+
+@keyframes pulseSeatbelt {
+    0% {
+        fill: #fd4370;
+    }
+
+    70% {
+        fill: #696969;
+    }
+
+    100% {
+        fill: #fd4370;
+    }
+}
+
+.pulsation {
+    animation: pulse 2s infinite;
+}
+
+/* koniec globalnych klas */
+
+
+.wrapper {
+    display: none;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+
+/* hud ze statami */
+.normal-hud {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: transform .3s;
+    transform: translateY(-100%);
+    position: absolute;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+}
+
+.normal-hud .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.normal-hud .inside-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.normal-hud .inside-icon .icon-filling {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    transition: height .1s;
+    border-radius: 5px;
+}
+
+.normal-hud svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+}
+
+.normal-hud .icon-filling.hunger {
+    background-color: #fd4370;
+}
+
+.normal-hud .icon-filling.water {
+    background-color: #fd4370;
+}
+
+.normal-hud .icon-filling.health {
+    background-color: #fd4370;
+}
+
+.normal-hud .icon-filling.vest {
+    background-color: #fd4370;
+}
+
+.normal-hud .icon-filling.mic {
+    background-color: #fd4370;
+}
+
+/* Koniec stat gracz */
+
+
+
+/* tablica z kierunkiem swiata i ulica */
+
+.street-board {
+    display: flex;
+    flex-wrap: nowrap;
+    opacity: 0;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.street-board .view-direction {
+    font-size: 5.6rem;
+    font-weight: 900;
+}
+
+.street-board .line {
+    height: 40px;
+    width: 5px;
+    background-color: white;
+}
+
+.street-board .district {
+    font-size: 2.9rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+}
+
+.street-board .street-name {
+    font-size: 1.9rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+
+/* koniec z tablica ulic i kierunkow */
+
+
+/* car-hud */
+.control-panel {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    position: absolute;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.control-panel svg {
+    width: 30px;
+    height: 30px;
+}
+
+.control-panel .seatbelt-pulse {
+    animation: pulseSeatbelt 1.75s infinite !important;
+}
+
+.car-hud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    right: 35px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translateY(-100%);
+}
+
+
+.car-hud .car-speedometr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.car-hud .car-speedometr .speed-display {
+    display: flex;
+    align-items: center;
+    font-size: 8.8rem;
+    font-weight: 900;
+    line-height: 1;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+    font-style: italic;
+}
+
+.car-hud .car-speedometr .measure {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fd4370;
+    font-style: italic;
+}
+
+.car-hud .bottom-display {
+    margin-top: -10px;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+
+
+.car-hud .fuel {
+    height: fit-content;
+}
+
+
+
+/* koniec carhudu */
+
+
+
+/* info w prawym górnym */
+/* .server-info  */
+
+
+.server-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2.5rem 2.5rem 0 0;
+}
+
+.server-info .top {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+
+.server-info .player-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: .1rem;
+}
+
+.server-info .player-data-identifiers {
+    text-align: end;
+}
+
+.server-info .player-data-identifiers .ssn {
+    margin-top: .2rem;
+}
+
+
+
+.server-info .id-display,
+.server-info .uid-display {
+    display: flex;
+    justify-content: center;
+}
+.server-info .uid-display {
+    margin-top: .2rem;
+}
+
+
+
+
+.server-info .line {
+    height: 30px;
+    width: 3px;
+}
+
+
+.server-info .server-ip {
+    margin-top: .2rem;
+    font-size: 1.5rem;
+}
+
+.server-info .logo img {
+    width: 80px;
+    height: 80px;
+}

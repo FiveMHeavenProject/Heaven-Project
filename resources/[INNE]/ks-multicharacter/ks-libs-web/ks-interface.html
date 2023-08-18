@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ks-styles/ks-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>ks-multicharacter</title>
+</head>
+<body>
+    <div id="ksRoot">
+        <div id="ksOverlay">
+            <div id="ksCharacterSelector">
+                <div class="ksChTitle">
+                    <div class="ksChT_Line"></div>
+                    <div class="ksChT_Icon" style="background-image: url('./ks-files/ksChSelect.svg');"></div>
+                    <div class="ksChT_Txt">
+                        <h1 id="ksConfSelectTitle"></h1>
+                        <h2 id="ksConfSelectSubTitle"></h2>
+                    </div>
+                </div>
+                <div id="ksSlotsCont"></div>
+            </div>
+            <div id="ksCharacterCreator"></div>
+        </div>
+    </div>
+    <script src="../ks-libs-configs/ks-config.js"></script>
+    <script src="./ks-scripts/ks-script.js"></script>
+</body>
+</html>

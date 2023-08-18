@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-3" y="-1" width="30" height="30" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ksChSel" transform="translate(3 1)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <path id="Group_39" data-name="Group 39" d="M22.075,19.384a7,7,0,0,1,7,7v1.4a2.8,2.8,0,0,1-2.8,2.8H6.675a2.8,2.8,0,0,1-2.8-2.8v-1.4a7,7,0,0,1,7-7Zm-5.6-16.8a7,7,0,1,1-4.95,2.05A7,7,0,0,1,16.475,2.583Z" transform="translate(-4.375 -2.583)" fill="#fff"/>
+  </g>
+</svg>

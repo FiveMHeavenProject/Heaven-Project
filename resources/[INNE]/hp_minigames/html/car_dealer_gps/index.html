@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Car DEALER - HACK GPS ( FIVE CITY )</title>
+
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="./script/script.js" defer></script>
+	<script src="../script.js"></script>
+</head>
+
+<body onload="gameInit()">
+	<div class="container">
+		<div class="hackBox">
+			<div class="hackStart" id="buttonStart" onclick="gameStart()">
+				Zacznij Hackować
+			</div>
+
+			<div class="hackOptions" style="display: none;">
+				<div class="hackButton">
+					<div class="hackDesc">Czas długości hackowania</div>
+					<input class="progress" type="range" min="10" max="60" value="10" step="1"
+						oninput="timeChangeFunction()" id="timeChangeInput" />
+					<div class="hackCount" id="timeChangeId"></div>
+				</div>
+				<div class="hackButton">
+					<div class="hackDesc">
+						Szybkość pojawiania kwadratów
+					</div>
+					<input class="progress" type="range" min="100" max="1000" value="1000" step="50"
+						oninput="spawnChangeFunction()" id="spawnChangeInput" />
+					<div class="hackCount" id="spawnChangeId"></div>
+				</div>
+				<div class="hackButton">
+					<div class="hackDesc">
+						MAX. ilość kwadratów aby przegrać
+					</div>
+					<input class="progress" type="range" min="1" max="20" value="20" step="1"
+						oninput="maxsquareChangeFunction()" id="maxsquareChangeInput" />
+					<div class="hackCount" id="maxsquareChangeId"></div>
+				</div>
+			</div>
+
+			<div class="hackInfo" style="display: none">
+				<h2 id="textInfo"></h2>
+			</div>
+			<div class="hackText" style="display: none">
+				<h2 id="textInfo">KLIKAJ JAK NAJSZYBCIEJ</h2>
+			</div>
+
+			<div class="hackFunction" style="display: none"></div>
+			<div id="hackFunction2" onclick="gameOver();" style="display: none"></div>
+
+			<div class="hackFooter">
+				<div id="progressBox" style="display: none">
+					<div class="progressBox">
+						<div class="progressBar" id="progress-bar"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
